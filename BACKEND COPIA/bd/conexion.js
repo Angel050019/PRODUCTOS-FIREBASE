@@ -14,6 +14,7 @@ module.exports = {
     productos
 }
 
+
 //console.log(usuarios);
 
 //console.log(productos);

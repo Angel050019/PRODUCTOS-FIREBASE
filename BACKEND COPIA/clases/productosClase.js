@@ -16,7 +16,7 @@ class Producto{
     set precio(precio){
         this._precio=precio;
     }
-    set descripcion(descripcion=""){
+    set descripcion(descripcion){
         this._descripcion=descripcion;
     }
     get id(){

@@ -40,7 +40,7 @@ async function nuevoProducto(data){
     const producto1 = new Producto(data);
     var productoValido = false;
     if (validarProductos(producto1.getProducto)){
-        await productosBD.doc().set(producto1.getProducto);
+        await productosBD.doc().set(producto1.getProducto)
         productoValido = true;
     }
     return productoValido;
@@ -66,10 +66,10 @@ module.exports={
 
 //borrarProducto("1");
 
-//data = {
-//    cantidad:"50",
-//    precio:"30",
-//    descripcion:"Chips"
-//}
+/*data= {
+    cantidad:"50",
+    precio:"30",
+    descripcion:"takis"
+}*/
 
-//uevoProducto(data);
+//nuevoProducto(data);
