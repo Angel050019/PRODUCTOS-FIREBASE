@@ -2,7 +2,7 @@ var ruta = require("express").Router();
 //var {Router} = require("express"); se busca la ruta dentro de express, solo que ahora se llamaria a cada uno como Router
 var{mostrarUsuarios,nuevoUsuario,borrarUsuario,buscarPorId}=require("../bd/usuariosBD");
 
-ruta.get("/",async(req,res)=>{
+ruta.get("/User",async(req,res)=>{
     //res.send("Hola estas en raiz");
     const usuarios=await mostrarUsuarios();
    // console.log(usuarios);
@@ -10,7 +10,7 @@ ruta.get("/",async(req,res)=>{
     
 });
 
-ruta.get("/buscarPorId/:id", async(req,res)=>{
+ruta.get("/buscarPorIdUser/:id", async(req,res)=>{
     var usuarioValido=await buscarPorId(req.params.id);
     res.json(usuarioValido);
 });

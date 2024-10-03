@@ -1,12 +1,12 @@
 var ruta = require("express").Router();
 var { mostrarProductos, nuevoProducto, borrarProducto, buscarPorId } = require("../bd/productosBD");
 
-ruta.get("/", async (req, res) => {
+ruta.get("/Product", async (req, res) => {
     const productos = await mostrarProductos();
     res.json(productos);
 });
 
-ruta.get("/buscarporId/:id", async (req, res) => {
+ruta.get("/buscarporIdProduct/:id", async (req, res) => {
     var productoValido = await buscarPorId(req.params.id);
     res.json(productoValido);
 });
